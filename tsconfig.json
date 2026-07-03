@@ -2,19 +2,25 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
+    "jsx": "react-jsx",
+    "typeRoots": ["node_modules/@types", "src/@types"],
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/assets/*": [
-        "./assets/*"
-      ]
+      "@app/*": ["./src/*"],
+      "@app/components/*": ["./src/components/*"],
+      "@app/redux/*": ["./src/redux/*"],
+      "@app-analytics/*": ["./src/analytics/*"],
+      "@app-assets/*": ["./src/assets/*"],
+      "@app-constants/*": ["./src/constants/*"],
+      "@app-navigation/*": ["./src/navigation/*"],
+      "@app-screens/*": ["./src/screens/*"],
+      "@auth/*": ["./src/auth/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@models/*": ["./src/models/*"],
+      "@network/*": ["./src/network/*"],
+      "@notifications/*": ["./src/notifications/*"],
+      "@storage/*": ["./src/storage/*"],
+      "@utils/*": ["./src/utils/*"]
     }
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts"
-  ]
+  "include": ["**/*.ts", "**/*.tsx"]
 }
