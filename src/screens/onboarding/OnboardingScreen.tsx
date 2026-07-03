@@ -5,6 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import { ROUTES } from "@app-navigation/constants/routes";
 import type { RootStackParamList } from "@app-navigation/types";
+import { useAppTheme } from "@app/hooks";
 
 type Nav = NativeStackNavigationProp<
   RootStackParamList,
@@ -13,12 +14,17 @@ type Nav = NativeStackNavigationProp<
 
 export const OnboardingScreen = () => {
   const navigation = useNavigation<Nav>();
+  const { colors, typography, spacing } = useAppTheme();
 
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
-        <Text style={styles.title}>Little Lemon</Text>
-        <Text style={styles.subtitle}>Welcome</Text>
+        <Text style={[typography.displayTitle, { color: colors.green }]}>
+          Little Lemon
+        </Text>
+        <Text style={[typography.subtitle, { color: colors.green }]}>
+          Welcome
+        </Text>
         <TouchableOpacity
           style={styles.button}
           onPress={() => navigation.replace(ROUTES.HOME_SCREEN)}
