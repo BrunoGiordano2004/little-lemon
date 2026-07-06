@@ -77,7 +77,7 @@ implementation rather than after mistakes.
 
 ## 5. Project Context
 
-A2A Energia — React Native 0.84.1 mobile app (React 19, New Architecture enabled). Package manager: **yarn**. Node >= 22.11.0.
+Little lemon — Expo (~57.0.1) React Native (0.86.0) mobile app (React 19, New Architecture enabled). Package manager: **yarn**. Node >= 22.11.0.
 
 ## Source Code Structure
 
